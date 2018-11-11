@@ -1,0 +1,29 @@
+<!--pages/movie_detail/movie_detail.wxml-->
+<view class='wrapper'>
+
+  <view class='movie'>
+  
+    <image class='movieImg' src='{{movie.image}}' mode='widthFix'></image>
+
+    <view class='movieContent'>
+      <view class='movieInfo'>
+        <view class='movieTitle'>{{movie.title}}</view>
+        <view class='movieDescription'>{{movie.description}}</view>
+      </view>
+
+      <view class='buttons'>
+        <navigator class='buttonsFunction' url='/pages/comment_list/comment_list?movieId={{movie.id}}'>
+          <image class='viewCommentImg' src='/images/view.png'></image>
+          <view>查看影评</view>
+        </navigator>
+
+        <view class='buttonsFunction' bindtap='checkAlreadyComment' data-id='{{movie.id}}'>
+          <image class='addCommentImg' src='/images/comment.png'></image>
+          <view>添加影评</view>
+        </view>
+      </view>    
+    </view>
+
+  </view>
+
+</view>

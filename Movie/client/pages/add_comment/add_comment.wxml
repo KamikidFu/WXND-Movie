@@ -1,0 +1,37 @@
+<!--pages/add_comment/add_comment.wxml-->
+<view class='wrapper'>
+  
+  <view class='movie'>
+    <image class='movieImg' src='{{movie.image}}' mode='widthFix'></image>
+
+    <view class='movieContent'>
+      <view class='movieInfo'>
+        <view class='movieTitle'>
+          {{movie.title}}
+        </view>
+        
+        <block class='movieComment' wx:if="{{commentType == 0}}">
+          <textarea class='comment' placeholder='输入你的影评内容(255字内)' maxlength='255'
+                    bindinput='inputEvent'></textarea>
+        </block>
+        
+        <block class='buttons' wx:if="{{commentType == 1}}">
+          <view class='buttonsFuntion' bindtouchstart='startRecording' bindtouchend='stopRecording'>
+            <image class='recorderImg' src='/images/record.png'></image>
+            <view class='record'>开始录音</view>
+          </view>
+        </block>
+
+      </view>
+
+    </view>
+
+
+    </view>
+  </view>
+
+<view class='footer'>
+  <view class='footerFunction commentComplete {{!comment&&!voice ? "null" : ""}}' bindtap='goToPreviewPage'>
+    <view class='complete'>完成</view>
+  </view>
+</view>

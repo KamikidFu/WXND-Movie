@@ -1,0 +1,52 @@
+/* client/pages/app_home/app_home.wxss */
+.detail{
+ margin: 0 100rpx;
+}
+.movieImg{
+  width: 550rpx;
+  height: 700rpx;
+  margin-top: 40rpx;
+}
+.movieTitle{
+  margin-top: 10rpx;
+  text-align: center;
+  font-weight: bold;
+  font-size: 45rpx;
+  line-height: 64rpx;
+  color: black;
+}
+
+.comment{
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.userImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.recommand{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: gray;
+}
+
+.footerFunction{
+  text-align: center;
+  width: 375rpx;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+}
+.footerFunction image{
+  margin-right: 10rpx; 
+  width: 40rpx;
+  height: 40rpx;
+}

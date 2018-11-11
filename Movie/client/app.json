@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/app_home/app_home",
+    "pages/add_comment/add_comment",
+    "pages/comment_list/comment_list",
+    "pages/comment_detail/comment_detail",
+    "pages/hot_movie/hot_movie",
+    "pages/comment_preview/comment_preview",
+    "pages/user_panel/user_panel",
+    "pages/movie_detail/movie_detail"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "看看电影",
+    "navigationBarTextStyle": "black"
+  }
+}

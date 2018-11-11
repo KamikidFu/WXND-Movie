@@ -1,0 +1,57 @@
+/* pages/comment_detail/comment_detail.wxss */
+.commentList{
+  margin-top: 50rpx;
+}
+.comment{
+  padding: 20rpx;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-bottom: solid 1rpx gainsboro;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+}
+.userImg{
+  width: 100rpx;
+  height: 100rpx;
+}
+.userName{
+  margin: 20rpx 30rpx;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+.content{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+
+.record{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0; 
+  margin-left: 80rpx;
+  margin-top: 20rpx;
+  width: 200rpx;
+  border-radius: 13rpx;
+  border: solid 1rpx gainsboro;
+  font-size: 35rpx;
+  line-height: 49rpx;
+  color: gray;
+  background-color: #fff;
+}
+.recorderImg{
+  margin-right: 10rpx; 
+  width: 40rpx;
+  height: 40rpx;
+}

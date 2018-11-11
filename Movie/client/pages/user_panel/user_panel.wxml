@@ -1,0 +1,59 @@
+<!--pages/user_panel/user_panel.wxml-->
+<!--Login-->
+<view class="unlogin" wx:if="{{!userInfo}}">
+      <view class="unlogin-note">用户尚未登录</view>
+  <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登录</button>
+</view>
+
+<view wx:else>
+
+  <!-- Tab选项卡-->
+  <view class="tab-wrapper">
+    <view data-tab="published" bindtap='onTapTab' class="tab-item">已发布的影评</view>
+    <view data-tab="favor" bindtap='onTapTab' class="tab-item">已收藏的影评</view>
+  </view>    
+
+  <!--已收藏影评-->
+  <view class='comments' wx:if="{{shownTab != 'published'}}">
+      <view class='commentsList' wx:for="{{favorCommentsList}}" wx:key="id">
+        <image class='movieImg' src='{{item.image}}' mode='widthFix'></image>
+        <view class='movieCommentContent'>
+          <view class='movieTitle'>{{item.title}}</view>
+          <view class='comment' wx:if="{{item.commentType==0}}">{{item.content}}</view>
+
+          <view class='record' bindtap="goToPlay" data-key="{{item.voice}}" wx:if="{{item.commentType==1}}">
+            <image class='recorderImg' src='/images/record.png'></image> 
+            <view class='recordPlay'>点击播放</view>
+          </view>
+          <view class='movieCommentUser'>
+            <image class='userImg' src='{{item.avatar}}' mode='widthFix'></image>
+            <view class='userName'>{{item.username}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <!--已发布的影评-->
+  <view class="pub-comments"  wx:if="{{shownTab == 'published'}}">
+    <view class="pub-commentList" wx:for="{{publishCommentList}}" wx:key="id">
+      <image class='pub-movieImg' src='{{item.image}}' mode='widthFix'></image>
+      <view class='pub-movieCommentContent'>
+         <view class='pub-movieTitle'>{{item.title}}</view>
+         <view class='pub-comment' wx:if="{{item.commentType==0}}">{{item.content}}</view>
+
+          <view class='pub-record' bindtap="goToPlay" data-key="{{item.voice}}" wx:if="{{item.commentType==1}}">
+            <image class='pub-recorderImg' src='/images/record.png'></image> 
+            <view class='pub-recordPlay'>点击播放</view>
+          </view>
+         <view class='pub-movieCommentUser'>
+          <image class='pub-userImg' src='{{item.avatar}}' mode='widthFix'></image>
+          <view class='pub-userName'>{{item.username}}</view>
+        </view>
+       </view>
+    </view>
+  </view>
+
+  <view></view>
+
+</view>
+      

@@ -1,0 +1,15 @@
+<!--pages/hot_movie/hot_movie.wxml-->
+<view class='wrapper'>
+    <view class='hotMovie'>
+
+      <navigator class='hotMovieNav' wx:for="{{hotFilmList}}" wx:key="id" 
+                 url='/pages/movie_detail/movie_detail?id={{item.id}}'> 
+        <image class='hotMovieImg' src='{{item.image}}' mode='widthFix'></image> 
+        <view class='hotMovieInfo'> 
+          <view class='hotMovieTitle'>{{item.title}}</view> 
+          <view class='hotMovieCategory'>{{item.category}}</view>
+        </view> 
+      </navigator> 
+
+   </view> 
+</view>

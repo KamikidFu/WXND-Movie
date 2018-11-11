@@ -1,0 +1,25 @@
+<!--client/pages/app_home/app_home.wxml-->
+<view class='wrapper'>
+  <navigator class='detail' url='/pages/movie_detail/movie_detail?id={{movieList[0].id}}'>
+    <image class='movieImg' src='{{movieList[0].image}}' mode='widthFix'></image>
+    <view class='movieTitle'>
+      {{movieList[0].title}}
+    </view>
+  </navigator>
+
+  <navigator class='comment' url='/pages/comment_detail/comment_detail?movieId={{movieList[0].id}}'>
+    <image class='userImg' src='/images/user.png' mode='widthFix'></image>
+    <view class='recommand'>有位大佬似乎给你推荐了一部电影</view>  
+  </navigator>
+</view>
+
+<view class='footer'>
+  <navigator class='footerFunction' url='/pages/hot_movie/hot_movie'>
+    <image class='hotImg' src='/images/hot.png'></image>
+    <view class='hotText'>热门</view>
+  </navigator>
+  <navigator class='footerFunction' url='/pages/user_panel/user_panel'>
+    <image class='myImg' src='/images/user.png'></image>
+    <view class='myText'>我的</view>
+  </navigator>
+</view>

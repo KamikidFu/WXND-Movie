@@ -1,0 +1,106 @@
+/* pages/comment_detail/comment_detail.wxss */
+.movie{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movieImg{
+  position: absolute;
+  width: 250rpx;
+  height: 250rpx;
+  margin-top: 40rpx;
+  z-index: 2;
+  border: solid 1rpx gainsboro;
+}
+.movieContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 110rpx 30rpx 52rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx; 
+  border: solid 1rpx gainsboro;
+}
+.movieInfo{
+  padding: 300rpx 90rpx 0;
+}
+.movieTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: 38rpx;
+  line-height: 53rpx;
+}
+.comment{
+  margin-top: 50rpx;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+}
+.userImg{
+  width: 100rpx;
+  height: 100rpx;
+}
+.userName{
+  margin: 20rpx 30rpx;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+.content{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.buttons{
+  width: 690rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.buttonsFunction{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 150rpx 20rpx 50rpx;
+  padding: 20rpx 50rpx;
+  border-radius: 12rpx;
+  border: solid 1rpx gainsboro;
+  font-size: 35rpx;
+  line-height: 49rpx;
+  color: gray;
+  background-color: #fff;
+}
+.favCommentImg, .addCommentImg{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx; 
+}
+
+.record{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0; 
+  margin-left: 80rpx;
+  margin-top: 20rpx;
+  width: 200rpx;
+  border-radius: 13rpx;
+  border: solid 1rpx gainsboro;
+  font-size: 35rpx;
+  line-height: 49rpx;
+  color: gray;
+  background-color: #fff;
+}
+.recorderImg{
+  margin-right: 10rpx; 
+  width: 40rpx;
+  height: 40rpx;
+}

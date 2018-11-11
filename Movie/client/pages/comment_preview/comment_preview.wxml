@@ -1,0 +1,36 @@
+<!--pages/movie_preview/movie_preview.wxml-->
+<view class='wrapper'>
+  
+  <view class='movie'>
+    <image class='movieImg' src='{{movie.image}}' mode='widthFix'></image>
+
+    <view class='movieContent'>
+      <view class='movieInfo'>
+        <view class='movieTitle'>
+          {{film.title}}
+        </view>
+        <view class='movieComment'>
+          <view class='comment' wx:if="{{comment}}">{{comment}}</view>
+
+          <view class='record' bindtap="goToPlay" data-key="{{voice}}" wx:if='{{voice}}'>
+            <image class='recorderImg' src='/images/record.png'></image> 
+            <view class='recordPlay'>点击播放</view>
+          </view>
+        </view>
+      </view>
+
+        <view class='buttons'>
+          <view class='buttonsFunction' bindtap='goBack'>
+            <image class='revokeImg' src='/images/revoke.png'></image>
+            <view>重新编辑</view>
+          </view>
+
+          <view class='buttonsFunction' bindtap='publishComment'>
+            <image class='publishImg' src='/images/submit.png'></image>
+            <view>发布影评</view>
+          </view>
+        </view>
+
+    </view>
+  </view>
+</view>

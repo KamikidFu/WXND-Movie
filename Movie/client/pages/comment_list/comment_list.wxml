@@ -1,0 +1,24 @@
+<!--pages/comment_detail/comment_detail.wxml-->
+<view class='wrapper'>
+
+  <view class='commentList'>    
+    <view class='comment' wx:for='{{commentList}}' wx:for-item="item" wx:key='id' bindtap='onTapComment' data-comment="{{item}}">
+      <view class='user'>
+          <image class='userImg' src='{{item.avatar}}' mode='widthFix'></image>
+          <view class='userName'>{{item.username}}</view>
+        <view class='content' wx:if='{{item.comment_type==0}}'>{{item.content}}</view>
+        <view class='record' bindtap="goToPlay" data-key="{{item.voice}}" wx:if='{{item.comment_type==1}}'>
+            <image class='recorderImg' src='/images/record.png'></image> 
+            <view class='recordPlay'>语音影评</view>
+          </view>
+      </view>
+    </view>  
+  </view>
+
+  <view class='footer'>
+    <view class='footerFunction' bindtap='goHome'>
+      <view class='text'>返回首页</view>
+    </view>
+  </view>
+
+</view>
